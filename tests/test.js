@@ -13,3 +13,13 @@ describe('GET "/"',()=>{
         request(app).get('/').expect('Hello!',done)
     })
 })
+
+describe('GET "/item"',()=>{
+    it('respond with array of item',(done) =>{
+        let want = [
+            { id: 1, name: 'Iphone 12 Pro Max'} ,
+            { id: 2, name: 'Iphone 12 Pro Max'}
+        ] ;
+        request(app).get('/item').expect('',done)
+    })
+})
