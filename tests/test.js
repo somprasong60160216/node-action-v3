@@ -1,5 +1,5 @@
 const assert = require('assert')
-const Request = require('supertest')
+const request = require('supertest')
 const app = require('../index')
 
 describe('Validate setting the test', () => {
@@ -10,6 +10,6 @@ describe('Validate setting the test', () => {
 
 describe('GET "/"',()=>{
     it('respond with Hello!',(done) =>{
-        Request(app).get('/').expect('Hello!',done)
+        request(app).get('/').expect('Hello!',done)
     })
 })
